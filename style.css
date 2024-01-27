@@ -1,0 +1,407 @@
+:root{
+
+    /* color */
+    --defaulttext: rgb(123, 201, 80);
+    --hovertext: rgba(124, 229, 119, 1);
+    --defaultheading: rgba(156, 255, 217, 1);
+    --defaultbg: rgba(182, 239, 212, 1);
+    --p-heading: rgba(102, 106, 134, 1);
+    --s-heading: rgba(149, 184, 209, 1);
+    --boxbg: rgba(232, 221, 181, 1);
+   
+
+    /* font family */
+
+    --logo: 'Pacifico', cursive;
+    --headingdefault: 'Roboto', sans-serif;
+    --paradefault: 'Poppins', sans-serif;
+    --link:'Ubuntu', sans-serif;
+
+
+}
+
+/* global styles */
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-family: var(--headingdefault);
+}
+p{
+    font-family: var(--paradefault);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    all: unset;
+}
+
+
+/* global classes */
+.btn-white{
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    /* width: fit-content; */
+}
+
+.btn-white:hover{
+    color: var(--defaulttext);
+    background-color: white;
+    font-family: var(--link);
+}
+
+.section h1{
+    margin: 1rem;
+}
+/* nav bar */
+#nav{
+    background: white;
+}
+
+/* nav center */
+
+.nav-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo{
+    font-family: var(--logo);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: var(--defaulttext);
+}
+
+.logo:hover{
+    color: var(--hovertext);
+}
+
+.nav-toggle{
+    color: var(--defaulttext);
+}
+
+.nav-toggle:hover{
+    color: var(--hovertext);
+}
+
+
+
+.linksContainer{
+    overflow: hidden;
+    height: 0;
+    transition: all .5s linear;
+}
+
+.links{
+    padding: 2rem;
+}
+
+.show-links{
+    height: auto !important;
+}
+
+.links li{
+    padding: 1rem 0;
+    color: var(--defaulttext);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.links li:hover{
+    color: var(--hovertext);
+}
+
+
+/* hero */
+.banner{
+    min-height: 90vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner h1{
+    color: white;
+    margin: 1rem;
+    /* text-align: center; */
+}
+
+.banner p{
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+
+
+
+/* main */
+
+header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(41, 0, 249, 0.6), rgba(0, 0, 0, 0.5)), url(images/pexels-pixabay-258154.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* section */
+.section{
+    max-width: 95vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* padding: 5vw; */
+    justify-items: center;  
+    /* align-items: center; */
+    margin: auto;
+}
+
+
+/* section explore */
+.section h1{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Roboto' , sans-serif;
+    color: var(--defaulttext);
+}
+
+.section .img-container{
+    width: 95vw;
+    height: 50vh;
+    /* overflow: hidden; */
+    background: url(images/scenario.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20vw;
+    
+}
+
+.img-container h2{
+    color: white;
+    max-width: 60vw;
+    text-align: center;
+}
+
+
+.section span{
+    color: red;
+}
+
+.article{
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-top: 3rem;
+    text-align: justify;
+}
+
+.article .article-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--defaulttext);
+}
+
+.article .article-text{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;;
+}
+
+
+/* section room */
+
+#room{
+    background: rgb(255, 246, 225);
+}
+
+
+.slide-container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.slides{
+    background: white;
+    overflow-x: visible;
+    width: 20rem;
+    padding: 1rem;
+    transition: all .5s linear;
+    margin: 1rem;
+    /* position: relative; */
+    /* transform: translateX(-00%); */
+}
+
+.slides:hover{
+    box-shadow: 5px 5px 10px gray;
+}
+
+.slides img{
+    width: 25rem;
+    height: 30rem;
+    margin-bottom: 10px;
+}
+
+.slides h3{
+    margin-bottom: 1rem;
+}
+
+.slides:hover p{
+    transform: scale(1.05);
+}
+
+
+
+/* section meetings & events */
+
+#meeting{
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    /* border: 2px solid black; */
+}
+#meeting .title h1{
+    margin: 1rem;
+}
+.video-container{
+    height: 114vh;
+    width: 95vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container video{
+    height: fit-content;
+    width: 95vw;
+}
+
+#meeting article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#meeting article h1{
+    color: black;
+    font-family: 'Roboto', sans-serif;;
+
+}
+
+
+#meeting .tab-container{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+#meeting .tab-container .tabs{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+    box-shadow: 2px 2px 8px;
+    padding: 0 1rem 2rem 1rem;
+}
+#meeting .tab-container .tabs h3{
+    margin: 2rem;
+}
+
+
+/* footer */
+
+footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    background: rgb(40, 0, 42);
+}
+
+
+footer p{
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+@media screen and (min-width: 800px){
+
+    #nav{
+        display: flex;
+        background: transparent;
+        justify-content: space-between;
+    }
+
+    .logo{
+        color: white;
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+
+    .linksContainer{
+        height: auto!important;
+    }
+
+    .links{
+        display: flex;
+        /* color: white; */
+    }
+
+    .links li{
+        margin-left: 1rem;
+        color: white;
+    }
+    
+}
+
+
+
+
+
